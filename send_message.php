@@ -1,5 +1,3 @@
-send_messages.php
-
 <?php
 $conn = new mysqli(
     "sql111.infinityfree.com",

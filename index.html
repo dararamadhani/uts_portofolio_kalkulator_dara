@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Dara Ramadhani - Pemograman Berbasis Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <!-- Ganti inisial logo -->
+  <div class="nav-logo">DR</div>
+  <ul class="nav-links">
+    <li><a href="#about">Tentang</a></li>
+    <li><a href="#hobi">Hobi</a></li>
+    <li><a href="#family">Keluarga</a></li>
+    <li><a href="#skills">Skill</a></li>
+    <li><a href="#education">Pendidikan</a></li>
+    <li><a href="#projects">Projek</a></li>
+    <li><a href="#gallery">Galeri</a></li>
+    <li><a href="#calculator">Kalkulator</a></li>
+    <li><a href="#contact">Kontak</a></li>
+    <li><a href="#comentar">Komentar</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()" title="Ganti tema">☀️</button>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="menu-overlay-bg" onclick="closeMenu()"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about"    onclick="closeMenu()">Tentang Aku</a>
+  <a href="#hobi"     onclick="closeMenu()">Hobi</a>
+  <a href="#skills" onclick="closeMenu()">Skills</a>
+  <a href="#family" onclick="closeMenu()">Family</a>
+  <a href="#education" onclick="closeMenu()">Education & Experience</a>
+  <a href="#projects" onclick="closeMenu()">My Projects</a>
+  <a href="#gallery"  onclick="closeMenu()">Gallery</a>
+  <a href="#calculator"  onclick="closeMenu()">Kalkulator</a>
+  <a href="#contact"  onclick="closeMenu()">Kontak</a>
+  <a href="#comentar"  onclick="closeMenu()">Komentar</a>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="home">
+
+<div class="container hero">
+
+<div class="hero-text reveal-left">
+
+<h4 class="hero-intro">
+HALO, SAYA
+</h4>
+
+<h1 class="hero-name">
+Dara Ramadhani
+</h1>
+
+<h3 class="hero-role">
+Informatics Student | Web Learner
+</h3>
+
+<p class="hero-desc">
+
+Saya mahasiswa Informatika yang tertarik pada Web Development,
+Struktur Data, dan pembuatan aplikasi interaktif.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#about" class="btn-primary">
+Tentang Saya
+</a>
+
+<a href="#projects" class="btn-secondary">
+Lihat Project
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-decoration reveal-right">
+
+<div class="glow-circle"></div>
+
+<div class="glow-circle small"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid reveal">
+      <!-- Ganti angka (data-target) dan label -->
+      <div class="stat-item"><span class="stat-number" data-target="19">0</span><span class="stat-label">Tahun Umur</span></div>
+      <div class="stat-item"><span class="stat-number" data-target="2">0</span><span class="stat-label">Mata Kuliah Favorit</span></div>
+      <div class="stat-item"><span class="stat-number" data-target="6">0</span><span class="stat-label">Hobi &amp; Minat</span></div>
+      <div class="stat-item"><span class="stat-number" data-target="1">0</span><span class="stat-label">Cita-Cita Impian</span></div>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+
+<!-- ============================================================
+     ABOUT / BIODATA
+     ============================================================ -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title reveal">Tentang Saya</h2>
+    <div class="about-grid">
+      <div class="about-img-wrap reveal-left">
+        <!-- Ganti div placeholder dengan <img src="foto-about.jpg" class="about-img" /> -->
+        <img src="FotoProfil.jpeg" alt="Foto Dara Ramadhani" class="about-img" style="width:75%;aspect-ratio:4/5;border-radius:14px;border:2px solid var(--accent-purple);object-fit:cover;" /><div class="about-img-deco"></div>
+      </div>
+      <div class="about-content reveal-right">
+        <!-- Ganti sapaan -->
+        <h3>Hei! Kenalan Yukk</h3>
+        <!-- Isi deskripsi dirimu -->
+        <p>Perkenalkan, saya adalah Dara Ramadhani, mahasiswa Informatika Universitas Syiah Kuala. Saya memiliki minat yang besar dalam dunia teknologi, khususnya di bidang pengembangan web karena salah satu impian saya adalah menjadi web developer. Saya senang mempelajari hal-hal baru dan terus mengembangkan kemampuan diri melalui berbagai project dan tugas perkuliahan.</p>
+        <P>Di waktu luang, saya suka mendengarkan musik, eksplorasi desain, serta mencoba membuat project sederhana untuk meningkatkan skill saya. Saya percaya bahwa setiap hari adalah kesempatan untuk tumbuh dan menjadi versi terbaik dari diri sendiri.</p>
+        <!-- Lengkapi biodata di bawah -->
+        <div class="biodata-list">
+          <div class="biodata-item"><span class="biodata-label">Nama</span><span class="biodata-value">Dara Ramadhani</span></div>
+          <div class="biodata-item"><span class="biodata-label">TTL</span><span class="biodata-value">Kota, DD Bulan YYYY</span></div>
+          <div class="biodata-item"><span class="biodata-label">Alamat</span><span class="biodata-value">Banda Aceh, Aceh, Indonesia</span></div>
+          <div class="biodata-item"><span class="biodata-label">Pendidikan</span><span class="biodata-value">Informatika Universitas Syiah Kuala</span></div>
+          <div class="biodata-item"><span class="biodata-label">Motto</span><span class="biodata-value">"Terus belajar, berkembang, dan jangan takut mencoba hal baru"</span></div>
+          <div class="biodata-item"><span class="biodata-label">Email</span><span class="biodata-value">MyEmail123@gmail.com</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+
+
+<!-- ============================================================
+     HOBI
+     ============================================================ -->
+<section id="hobi">
+  <div class="container">
+    <h2 class="section-title reveal">Hobi &amp; Minatku</h2>
+    <div class="hobi-grid">
+
+      <div class="hobi-card reveal">
+        <div class="hobi-icon"><i class="fa fa-book"></i></div>
+        <p class="hobi-title">Membaca Buku</p>
+        <p class="hobi-desc">Saya suka membaca berbagai genre buku, baik fiksi maupun non-fiksi karena membaca dapat membuka wawasan dan imajinasi.</p>
+      </div>
+      <div class="hobi-card reveal">
+        <div class="hobi-icon"><i class="fa fa-music"></i></div>
+        <p class="hobi-title">Mendengarkan Musik</p>
+        <p class="hobi-desc">Saya memiliki ketertarikan pada musik sebagai bagian dari keseharian saya. Music tidak hanya menjadi hiburan, tetapi juga membantu meningkatkan fokus dan kreativitas.</p>
+      </div>
+      <div class="hobi-card reveal">
+        <div class="hobi-icon"><i class="fa fa-tv"></i></div>
+        <p class="hobi-title">Menonton</p>
+        <p class="hobi-desc">Menonton film dan serial adalah salah satu hobi saya untuk mengisi waktu luang. Selain menghibur, kegiatan ini juga memberikan inspirasi dan ide-ide baru.</p>
+      </div>
+      <div class="hobi-card reveal">
+        <div class="hobi-icon"><i class="fa fa-plane"></i></div>
+        <p class="hobi-title">Traveling</p>
+        <p class="hobi-desc">Traveling adalah salah satu hobi saya untuk melepas penat dan menikmati pengalaman baru. Saya senang mengunjungi tempat-tempat menarik dan mengeksplorasi hal-hal yang belum pernah saya temui sebelumnya.</p>
+      </div>
+      <div class="hobi-card reveal">
+        <div class="hobi-icon"><i class="fa fa-paint-brush"></i></div>
+        <p class="hobi-title">Menggambar</p>
+        <p class="hobi-desc">Saya suka menggambar karena menjadi salah satu cara saya untuk mengekspresikan ide dan kreativitas saya.</p>
+      </div>
+      <div class="hobi-card reveal">
+        <div class="hobi-icon"><i class="fa fa-futbol"></i></div>
+        <p class="hobi-title">Olahraga</p>
+        <p class="hobi-desc">Saya suka berolahraga karena bikin badan lebih sehat dan pikiran jadi segar. Biasanya saya suka bermain badminton dan bersepeda.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+
+<!-- ============================================================
+     FAMILY
+     ============================================================ -->
+<section id="family">
+  <div class="container">
+    <h2 class="section-title reveal">Keluargaku</h2>
+    <div class="family-grid">
+
+      <!-- Kartu Ayah -->
+      <div class="family-card reveal">
+        <div class="family-avatar"><i class="fa fa-male"></i></div>
+        <!-- Untuk foto: <div class="family-avatar"><img src="foto-ayah.jpg" alt="Ayah" /></div> -->
+        <p class="family-name">Ayah</p>
+        <p class="family-desc">Ayah adalah anak pertama dari 4 bersaudara. Beliau bekerja sebagai seorang pegawai di USK.</p>
+      </div>
+
+      <!-- Kartu Ibu -->
+      <div class="family-card reveal">
+        <div class="family-avatar"><i class="fa fa-female"></i></div>
+        <p class="family-name">Ibu</p>
+        <p class="family-desc">Ibu adalah anak terakhir dari 5 bersaudara. Beliau bekerja sebagai seorang guru di SMP.</p>
+      </div>
+
+      <!-- Kartu Kakak (Saya) -->
+      <div class="family-card reveal">
+        <div class="family-avatar"><i class="fa fa-user"></i></div>
+        <p class="family-name">Saya/Kakak</p>
+        <p class="family-desc">Saya sendiri anak pertama dari 2 bersaudara. Sekarang saya sedang menempuh pendidikan di jurusan Informatika USK.</p>
+      </div>
+
+      <!-- Kartu Adik -->
+      <div class="family-card reveal">
+        <div class="family-avatar"><i class="fa fa-user"></i></div>
+        <p class="family-name">Adik</p>
+        <p class="family-desc">Adik saya anak terakhir dari 2 bersaudara. Sekarang dia sedang menempuh pendidikan di MTSN 4 Kota Banda Aceh.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SKILLS
+     ============================================================ -->
+<section id="skills">
+  <div class="container">
+
+    <h2 class="section-title reveal">My Skills</h2>
+
+    <div class="skills-wrapper">
+
+      <button class="skills-btn left" onclick="scrollSkills(-1)">
+        &#10094;
+      </button>
+
+      <div class="skills-grid" id="skillsGrid">
+
+        <div class="skills-card reveal">
+          <div class="skills-avatar">
+            <i class="fa fa-code"></i>
+          </div>
+
+          <p class="skills-name">HTML</p>
+
+          <span class="skills-relation">
+            Frontend
+          </span>
+
+          <p class="skills-desc">
+            Membuat struktur website yang rapi dan semantic.
+          </p>
+        </div>
+
+
+        <div class="skills-card reveal">
+          <div class="skills-avatar">
+            <i class="fa fa-paint-brush"></i>
+          </div>
+
+          <p class="skills-name">
+            CSS
+          </p>
+
+          <span class="skills-relation">
+            Styling
+          </span>
+
+          <p class="skills-desc">
+            Mendesain tampilan website responsive.
+          </p>
+        </div>
+
+
+        <div class="skills-card reveal">
+          <div class="skills-avatar">
+            <i class="fa-brands fa-js"></i>
+          </div>
+
+          <p class="skills-name">
+            JavaScript
+          </p>
+
+          <span class="skills-relation">
+            Programming
+          </span>
+
+          <p class="skills-desc">
+            Membuat website interaktif.
+          </p>
+        </div>
+
+
+        <div class="skills-card reveal">
+          <div class="skills-avatar">
+            <i class="fa fa-laptop"></i>
+          </div>
+
+          <p class="skills-name">
+            C Programming
+          </p>
+
+          <span class="skills-relation">
+            Data Structures
+          </span>
+
+          <p class="skills-desc">
+            Membuat program algoritma dan struktur data.
+          </p>
+        </div>
+
+
+        <div class="skills-card reveal">
+          <div class="skills-avatar">
+            <i class="fa fa-pen-nib"></i>
+          </div>
+
+          <p class="skills-name">
+            UI/UX Design
+          </p>
+
+          <span class="skills-relation">
+            Design
+          </span>
+
+          <p class="skills-desc">
+            Mendesain tampilan aplikasi yang user friendly dan modern.
+          </p>
+        </div>
+
+        <div class="skills-card reveal">
+        <div class="skills-avatar">
+          <i class="fa fa-object-group"></i>
+        </div>
+
+        <p class="skills-name">
+          Web Design
+        </p>
+
+        <span class="skills-relation">
+          Design
+        </span>
+
+        <p class="skills-desc">
+          Mendesain layout website yang modern, aesthetic, dan mudah digunakan.
+        </p>
+
+      </div>
+
+      </div>
+
+      <button class="skills-btn right" onclick="scrollSkills(1)">
+        &#10095;
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     EDUCATION & EXPERIENCE
+     ============================================================ -->
+<section id="education">
+
+<div class="container">
+
+<h2 class="section-title reveal">
+Pendidikan & Pengalaman
+</h2>
+
+<div class="education-grid">
+
+<div class="education-col reveal-left">
+
+<h3>Pendidikan</h3>
+
+<div class="timeline-item">
+
+<div class="timeline-icon">
+<i class="fa fa-school"></i>
+</div>
+
+<div class="timeline-body">
+
+<h4>MTS & MAS Darul Ihsan</h4>
+
+<span>
+2018 - 2024
+</span>
+
+<p>
+Saya adalah lulusan MTS dan MAS Darul Ihsan, tempat saya belajar banyak hal yang membantu membentuk pengetahuan dan karakter saya.
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-icon">
+<i class="fa fa-graduation-cap"></i>
+</div>
+
+<div class="timeline-body">
+
+<h4>Universitas Syiah Kuala</h4>
+
+<span>
+2024 - Sekarang
+</span>
+
+<p>
+Mahasiswa S1 Informatika
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="education-col reveal-right">
+
+<h3>Pengalaman</h3>
+
+<div class="timeline-item">
+
+<div class="timeline-icon">
+<i class="fa fa-users"></i>
+</div>
+
+<div class="timeline-body">
+
+<h4>Organisasi Kampus</h4>
+
+<span>
+2025 - Sekarang
+</span>
+
+<p>
+Aktif dalam kegiatan organisasi kampus dan berkontribusi dalam kerja tim, komunikasi, serta pelaksanaan berbagai program kerja.
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-icon">
+<i class="fa fa-laptop-code"></i>
+</div>
+
+<div class="timeline-body">
+
+<h4>Desain & Pengembangan Website</h4>
+
+<span>
+2025 - Sekarang
+</span>
+
+<p>
+Membuat dan mengembangkan website sederhana menggunakan HTML, CSS, dan JavaScript sebagai bagian dari pembelajaran di bidang IT.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ============================================================
+     MY PROJECTS — 3D CAROUSEL
+     ============================================================ -->
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title reveal">My Projects</h2>
+    <div class="carousel-wrapper reveal">
+      <button class="carousel-btn prev" onclick="carouselPrev()">&#8592;</button>
+      <button class="carousel-btn next" onclick="carouselNext()">&#8594;</button>
+
+      <div class="carousel-scene">
+        <div class="carousel-stage" id="carouselStage">
+
+          <!-- PROJECT #1 -->
+          <div class="proj-card">
+            <div class="proj-img-wrap">
+              <img src="EduParlemenApp.png" alt="EduParlemen Project">
+            </div>                    <div class="proj-body">
+              <p class="proj-title">EduParlemen App</p>
+              <p class="proj-desc">
+              platform digital yang dibuat untuk simulasi kegiatan parlemen, tapi dikemas lebih santai dan edukatif, terutama bahas isu lingkungan atau perubahan iklim.
+              </p>
+              <div class="proj-tags">
+                <span class="proj-tag">#Mendix</span>
+                <span class="proj-tag">#Low-Code</span>
+                <span class="proj-tag">#RPL</span>
+              </div>
+              <div class="proj-links">
+                <a href="#" class="proj-link">Live Demo</a>
+                <a href="#" class="proj-link">View Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT #2 -->
+          <div class="proj-card">
+            <div class="proj-img-wrap">
+              <img src="PortfolioWebsite.png" alt="Portfolio Project">
+            </div>
+            <div class="proj-body">
+              <p class="proj-title">Portfolio Website</p>
+              <p class="proj-desc">Website sederhana untuk menampilkan karya dan skill yang saya miliki.</p>
+              <div class="proj-tags"><span class="proj-tag">#HTML</span><span class="proj-tag">#CSS</span><span class="proj-tag">#JavaScript</span></div>
+              <div class="proj-links"><a href="#" class="proj-link">Live Demo</a><a href="#" class="proj-link">View Code</a></div>
+            </div>
+          </div>
+
+          <!-- PROJECT #3 -->
+          <div class="proj-card">
+            <div class="proj-img-wrap">
+              <img src="E-CommersApp.png" alt="E-CommersApp Project">
+            </div>
+            <div class="proj-body">
+              <p class="proj-title">E-commerce App</p>
+              <p class="proj-desc">Aplikasi belanja online dengan fitur utama seperti keranjang dan pembelian.</p>
+              <div class="proj-tags"><span class="proj-tag">#Java</span><span class="proj-tag">#Tailwind OOP</span><span class="proj-tag">#Data Structure</span></div>
+              <div class="proj-links"><a href="#" class="proj-link">Live Demo</a><a href="#" class="proj-link">View Code</a></div>
+            </div>
+          </div>
+
+          <!-- PROJECT #4 -->
+          <div class="proj-card">
+            <div class="proj-img-wrap">
+              <img src="PasarNusantara.png" alt="Mobile App UI Project">
+            </div>
+            <div class="proj-body">
+              <p class="proj-title">Pasar Nusantara</p>
+              <p class="proj-desc">Desain sederhana aplikasi mobile dengan tema cerah dan tampilan yang menarik.</p>
+              <div class="proj-tags"><span class="proj-tag">#Figma</span><span class="proj-tag">#React Native</span></div>
+              <div class="proj-links"><a href="#" class="proj-link">Live Demo</a><a href="#" class="proj-link">View Code</a></div>
+            </div>
+          </div>
+
+          <!-- PROJECT #5 -->
+          <div class="proj-card">
+            <div class="proj-img-wrap">
+              <img src="PythonCalculator.png" alt="PythonCalculator Project">
+            </div>
+            <div class="proj-body">
+              <p class="proj-title">Python Calculator</p>
+              <p class="proj-desc">Program sederhana untuk menghitung operasi matematika metode newton-raphson menggunakan Python.</p>
+              <div class="proj-tags"><span class="proj-tag">#python</span></div>
+              <div class="proj-links"><a href="#" class="proj-link">Live Demo</a><a href="#" class="proj-link">View Code</a></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+
+<!-- ============================================================
+     GALLERY
+     ============================================================ -->
+<section id="gallery">
+  <div class="container">
+    <h2 class="section-title reveal">Galeriku</h2>
+
+    <!-- Foto -->
+    <h3 class="gallery-section-title reveal">Foto-Foto Ku</h3>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="Galeri1.jpeg" alt="Foto 1" class="gallery-img" />
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="Galeri2.jpeg" alt="Foto 2" class="gallery-img" />
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="Galeri3.jpeg" alt="Foto 3" class="gallery-img" />
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="Galeri4.jpeg" alt="Foto 4" class="gallery-img" />
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="Galeri5.jpeg" alt="Foto 5" class="gallery-img" />
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="Galeri6.jpeg" alt="Foto 6" class="gallery-img" />
+      </div>
+    </div>
+
+    <!-- MUSIK -->
+    <div class="music-section reveal">
+      <div class="music-header">
+        <h3>Musik Favoritku</h3>
+        <button class="add-music-btn" onclick="openMusicModal()">
+          <i class="fa fa-plus"></i> Tambah Musik
+        </button>
+      </div>
+      <div class="music-list" id="musicList">
+
+        <!-- Lagu #1: Highway 1009 -->
+        <div class="music-track" data-src="highway-1009.mp3" data-title="Highway 1009" data-artist="ENHYPEN" onclick="playTrack(this)">
+          <div class="track-play-btn"><i class="fa fa-play"></i></div>
+          <div class="track-info">
+            <p class="track-title">Highway 1009</p>
+            <p class="track-artist">ENHYPEN</p>
+          </div>
+          <div class="equalizer"><span></span><span></span><span></span><span></span></div>
+        </div>
+
+        <!-- Lagu #2: Shout Out -->
+        <div class="music-track" data-src="shout-out.mp3" data-title="Shout Out" data-artist="ENHYPEN" onclick="playTrack(this)">
+          <div class="track-play-btn"><i class="fa fa-play"></i></div>
+          <div class="track-info">
+            <p class="track-title">Shout Out</p>
+            <p class="track-artist">ENHYPEN</p>
+          </div>
+          <div class="equalizer"><span></span><span></span><span></span><span></span></div>
+        </div>
+        
+         <!-- Lagu #3: Champion -->
+        <div class="music-track" data-src="champion.mp3" data-title="Champion" data-artist="BLACKPINK" onclick="playTrack(this)">
+          <div class="track-play-btn"><i class="fa fa-play"></i></div>
+          <div class="track-info">
+            <p class="track-title">Champion</p>
+            <p class="track-artist">BLACKPINK</p>
+          </div>
+          <div class="equalizer"><span></span><span></span><span></span><span></span></div>
+        </div>
+
+        <!-- Lagu #4: Sial --> 
+        <div class="music-track" data-src="sial.mp3" data-title="Sial" data-artist="MAHALINI" onclick="playTrack(this)">
+          <div class="track-play-btn"><i class="fa fa-play"></i></div>
+          <div class="track-info">
+            <p class="track-title">Sial</p>
+            <p class="track-artist">MAHALINI</p>
+          </div>
+          <div class="equalizer"><span></span><span></span><span></span><span></span></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+
+<!--=============================================================
+    CALCULATOR
+    =============================================================-->
+<section id="calculator">
+  <div class="container">
+    <h2 class="section-title reveal">Kalkulator</h2>
+
+    <div class="calc-wrapper">
+    <div class="calculator">
+      <div class="calc-header">
+        <span class="calc-title">SCIENTIFIC CALC</span>
+        <span class="calc-mode" id="angleMode">DEG</span>
+      </div>
+
+      <!-- Display -->
+      <div class="calc-display">
+        <div class="calc-expression" id="expression"></div>
+        <div class="calc-result" id="result">0</div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="calc-buttons">
+
+        <!-- Row 1: Mode & Clear -->
+        <button class="btn btn-fn" onclick="toggleAngle()">DEG/RAD</button>
+        <button class="btn btn-fn" onclick="clearAll()">AC</button>
+        <button class="btn btn-fn" onclick="deleteLast()">⌫</button>
+        <button class="btn btn-op" onclick="inputOperator('/')">÷</button>
+
+        <!-- Row 2: Trig -->
+        <button class="btn btn-fn" onclick="inputFunction('sin')">sin</button>
+        <button class="btn btn-fn" onclick="inputFunction('cos')">cos</button>
+        <button class="btn btn-fn" onclick="inputFunction('tan')">tan</button>
+        <button class="btn btn-op" onclick="inputOperator('*')">×</button>
+
+        <!-- Row 3: Advanced -->
+        <button class="btn btn-fn" onclick="inputFunction('sqrt')">√</button>
+        <button class="btn btn-fn" onclick="inputPower()">xʸ</button>
+        <button class="btn btn-fn" onclick="inputSquare()">x²</button>
+        <button class="btn btn-op" onclick="inputOperator('-')">−</button>
+
+        <!-- Row 4: More -->
+        <button class="btn btn-fn" onclick="inputFunction('log')">log</button>
+        <button class="btn btn-fn" onclick="inputFunction('ln')">ln</button>
+        <button class="btn btn-fn" onclick="inputConstant('pi')">π</button>
+        <button class="btn btn-op" onclick="inputOperator('+')">+</button>
+
+        <!-- Row 5: Numbers -->
+        <button class="btn btn-num" onclick="inputNumber('7')">7</button>
+        <button class="btn btn-num" onclick="inputNumber('8')">8</button>
+        <button class="btn btn-num" onclick="inputNumber('9')">9</button>
+        <button class="btn btn-fn" onclick="inputParenthesis('(')">( )</button>
+
+        <!-- Row 6 -->
+        <button class="btn btn-num" onclick="inputNumber('4')">4</button>
+        <button class="btn btn-num" onclick="inputNumber('5')">5</button>
+        <button class="btn btn-num" onclick="inputNumber('6')">6</button>
+        <button class="btn btn-fn" onclick="inputConstant('e')">e</button>
+
+        <!-- Row 7 -->
+        <button class="btn btn-num" onclick="inputNumber('1')">1</button>
+        <button class="btn btn-num" onclick="inputNumber('2')">2</button>
+        <button class="btn btn-num" onclick="inputNumber('3')">3</button>
+        <button class="btn btn-fn" onclick="inputPercent()">%</button>
+
+        <!-- Row 8 -->
+        <button class="btn btn-num btn-zero" onclick="inputNumber('0')">0</button>
+        <button class="btn btn-num" onclick="inputDot()">.</button>
+        <button class="btn btn-equals" onclick="calculate()">=</button>
+
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title reveal">Hubungi Saya</h2>
+    <div class="contact-inner">
+      <div class="contact-info reveal-left">
+        <h3>Yuk, Saling Kenal!</h3>
+        <p>Punya pertanyaan atau ingin berkenalan? Jangan sungkan untuk menghubungi saya melalui form di samping atau via media sosial di bawah ini.</p>
+        <div class="contact-links">
+          <a href="https://wa.me/628xxxxxxxxxx" class="contact-link-item" target="_blank">
+            <i class="fab fa-whatsapp"></i><span>+62 8xx-xxxx-xxxx</span>
+          </a>
+          <a href="mailto:MyEmail123@gmail.com" class="contact-link-item">
+            <i class="fa fa-envelope"></i><span>MyEmail123@gmail.com</span>
+          </a>
+          <a href="https://www.instagram.com/daraa.ramadhani28?igsh=YzNzOXRmYXBibTk3" class="contact-link-item">
+            <i class="fab fa-instagram"></i><span>@daraa.ramadhani28</span>
+          </a>
+          <a href="#" class="contact-link-item">
+            <i class="fab fa-tiktok"></i><span>@MyTikTok</span>
+          </a>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="contact-form">
+          <div class="form-group"><label>Nama Kamu</label><input type="text" placeholder="Masukkan namamu..." id="contactName" /></div>
+          <div class="form-group"><label>Email</label><input type="email" placeholder="email@gmail.com" id="contactEmail" /></div>
+          <div class="form-group"><label>Pesan</label><textarea placeholder="Tulis pesanmu di sini..." id="contactMsg"></textarea></div>
+          <button class="btn btn-primary" onclick="sendContact()" style="align-self:flex-start">
+            <i class="fa fa-paper-plane"></i> Kirim Pesan
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     COMENTAR
+     ============================================================ -->
+<section id="comentar">
+  <div class="container">
+    <h2 class="section-title">Komentar</h2>
+    <div id="messageList"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">DR</div>
+  <p class="footer-copy">© 2026 It's me Dara — All rights reserved</p>
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/daraa.ramadhani28?igsh=YzNzOXRmYXBibTk3" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/628xxxxxxxxxx" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://tiktok.com/@username" target="_blank"><i class="fab fa-tiktok"></i></a>
+  </div>
+</footer>
+
+<!-- Player Bar -->
+<div class="player-bar" id="playerBar">
+  <div class="player-now"><span id="playerTitle">—</span><span id="playerArtist">—</span></div>
+  <div class="player-controls">
+    <button onclick="prevTrack()"><i class="fa fa-step-backward"></i></button>
+    <button class="play-pause" onclick="togglePlay()" id="mainPlayBtn"><i class="fa fa-pause"></i></button>
+    <button onclick="nextTrack()"><i class="fa fa-step-forward"></i></button>
+  </div>
+  <div class="player-progress">
+    <span class="time-label" id="timeCurrent">0:00</span>
+    <input type="range" class="progress-slider" id="progressSlider" value="0" min="0" max="100" oninput="seekTo(this.value)" />
+    <span class="time-label" id="timeDuration">0:00</span>
+  </div>
+  <button class="player-close" onclick="closePlayer()"><i class="fa fa-times"></i></button>
+</div>
+
+<!-- Modal tambah musik -->
+<div class="music-modal-overlay" id="musicModalOverlay" onclick="closeMusicModal(event)">
+  <div class="music-modal" onclick="event.stopPropagation()">
+    <h4>Tambah Musik Baru</h4>
+    <input type="text" id="newTrackTitle" placeholder="Judul Lagu" />
+    <input type="text" id="newTrackArtist" placeholder="Nama Artis / Band" />
+    <input type="text" id="newTrackSrc" placeholder="Nama file (contoh: lagu.mp3)" />
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="addMusicTrack()"><i class="fa fa-plus"></i> Tambah</button>
+      <button class="btn btn-outline" onclick="closeMusicModal()">Batal</button>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()"><i class="fa fa-times"></i></button>
+  <img src="" alt="" class="lightbox-img" id="lightboxImg" onclick="event.stopPropagation()" />
+</div>
+
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa fa-chevron-up"></i></button>
+<div class="toast" id="toast"></div>
+<audio id="audioPlayer" preload="none"></audio>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script src="script.js">
+
+</script>
+</body>
+</html>

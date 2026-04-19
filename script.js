@@ -156,16 +156,20 @@ function sendContact(){
     headers:{'Content-Type':'application/x-www-form-urlencoded'},
     body:`name=${n}&email=${e}&message=${m}`
   })
-  .then(res=>res.text())
-  .then(res=>{
-    if(res.trim()==="success"){
+  .then(res => res.json())
+  .then(data => {
+    if(data.status === "success"){
       showToast('Pesan berhasil dikirim!');
       loadMessages();
     } else {
       showToast('Gagal mengirim pesan!');
     }
+  })
+  .catch(err => {
+    console.error(err);
+    showToast('Gagal mengirim pesan!');
   });
-
+    
   document.getElementById('contactName').value='';
   document.getElementById('contactEmail').value='';
   document.getElementById('contactMsg').value='';

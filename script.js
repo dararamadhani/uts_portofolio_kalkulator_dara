@@ -156,19 +156,18 @@ function sendContact(){
     headers:{'Content-Type':'application/x-www-form-urlencoded'},
     body:`name=${n}&email=${e}&message=${m}`
   })
-  .then(res => res.json())
-  .then(data => {
-    if(data.status === "success"){
+  .then(res => res.text())
+  .then(res => {
+    const clean = res.trim(); // 🔥 FIX
+  
+    if(clean === "success"){
       showToast('Pesan berhasil dikirim!');
       loadMessages();
     } else {
+      console.log("Response:", clean);
       showToast('Gagal mengirim pesan!');
     }
   })
-  .catch(err => {
-    console.error(err);
-    showToast('Gagal mengirim pesan!');
-  });
     
   document.getElementById('contactName').value='';
   document.getElementById('contactEmail').value='';

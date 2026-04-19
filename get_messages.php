@@ -1,11 +1,11 @@
 <?php
 header('Content-Type: application/json');
 
-// Konfigurasi koneksi database Laragon
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "portfolio_kontak";
+// Konfigurasi koneksi database Laragon\
+$host = "sql111.infinityfree.com"; 
+$user = "if0_41702193";            
+$pass = "F9SmpAUkjpqXuX";           
+$db   = "if0_12345678_portfolio_kontak"; 
 
 $koneksi = mysqli_connect($host, $user, $pass, $db);
 

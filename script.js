@@ -172,20 +172,29 @@ function sendContact(){
 }
 
 function loadMessages(){
-  fetch('get_messages.php')
-  .then(res=>res.json())
-  .then(data=>{
-    const container = document.getElementById('messageList');
+  const container = document.getElementById('messageList');
+  fetch('get_messages.php?nocache=' + Date.now())
+  .then(res => res.text())
+  .then(text => {
     if(!container) return;
+    let data;
+    try {
+      // Bersihkan karakter aneh sebelum JSON (BOM, whitespace, teks PHP)
+      const cleaned = text.trim().replace(/^[^\[{]*/, '');
+      data = JSON.parse(cleaned);
+    } catch(e) {
+      console.error("JSON parse error:", e, "Raw response:", text);
+      container.innerHTML = "<p class='error-msg'>Gagal memuat komentar.</p>";
+      return;
+    }
 
-    if(data.length === 0){
+    if(!Array.isArray(data) || data.length === 0){
       container.innerHTML = "<p class='empty-msg'>Belum ada pesan. Jadilah yang pertama!</p>";
       return;
     }
 
     container.innerHTML = data.map(msg => {
       const initial = msg.name.charAt(0).toUpperCase();
-
       return `
         <div class="message-card" data-initial="${initial}">
           <div class="msg-header">
@@ -198,10 +207,8 @@ function loadMessages(){
       `;
     }).join('');
   })
-  // Tambahkan baris ini untuk menangkap error
   .catch(error => {
     console.error("Error mengambil pesan:", error);
-    const container = document.getElementById('messageList');
     if(container) container.innerHTML = "<p class='error-msg'>Gagal memuat komentar.</p>";
   });
 }

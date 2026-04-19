@@ -1,13 +1,14 @@
+get_messages.php
+
 <?php
 header('Content-Type: application/json');
 
-// Konfigurasi koneksi database Laragon\
-$host = "sql111.infinityfree.com"; 
-$user = "if0_41702193";            
-$pass = "F9SmpAUkjpqXuX";           
-$db   = "if0_12345678_portfolio_kontak"; 
-
-$koneksi = mysqli_connect($host, $user, $pass, $db);
+$koneksi = mysqli_connect(
+    "sql111.infinityfree.com",
+    "if0_41702193",
+    "F9SmpAUkjpqXuX",
+    "if0_41702193_portfolio_kontak"
+);
 
 if (!$koneksi) {
     echo json_encode([]);
@@ -16,15 +17,12 @@ if (!$koneksi) {
 
 $query = "SELECT * FROM messages ORDER BY created_at DESC";
 $result = mysqli_query($koneksi, $query);
-
 $messages = [];
 if ($result) {
     while ($row = mysqli_fetch_assoc($result)) {
         $messages[] = $row;
     }
 }
-
 echo json_encode($messages);
-
 mysqli_close($koneksi);
 ?>

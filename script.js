@@ -158,7 +158,7 @@ function sendContact(){
   })
   .then(res => res.text())
   .then(res => {
-    const clean = res.trim(); // 🔥 FIX
+    const clean = res.trim();
   
     if(clean === "success"){
       showToast('Pesan berhasil dikirim!');
